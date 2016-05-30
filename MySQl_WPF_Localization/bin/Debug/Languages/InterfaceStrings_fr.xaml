@@ -1,0 +1,20 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+   xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <s:String  x:Key="UpdateStr"      >Mise à jour fiche</s:String>
+    <s:String    x:Key="AddStr"       >Ajouter de nouvelles</s:String>
+    <s:String    x:Key="LoadStr"      >Les données de charge</s:String>
+    <s:String    x:Key="EmployeesStr" >Des employés</s:String>
+    <s:String    x:Key="IDStr"        >ID Employé</s:String>
+    <s:String    x:Key="NameStr"      >Prénom</s:String>
+    <s:String    x:Key="AddressStr"   >Adresse</s:String>
+    <s:String    x:Key="CityStr"      >Ville</s:String>
+    <s:String    x:Key="PhoneStr"     >Téléphone</s:String>
+    <s:String    x:Key="EmailStr"     >Email</s:String>
+    <s:String    x:Key="BackStr"      >Retourner</s:String>
+    <s:String    x:Key="SaveStr"      >Conserver</s:String>
+    <s:String    x:Key="EnterStr"     >Entrer</s:String>
+    <s:String    x:Key="AddNewStr"    >Ajouter un nouvel employé</s:String>
+    <s:String    x:Key="EditStr"      >Modifier les données des employés</s:String>
+    <s:String    x:Key="EnterPersonIdStr"  >Entrez ID personne:</s:String>
+    <s:String    x:Key="UpdateExStr"  >Mettre à jour</s:String>
+</ResourceDictionary> 

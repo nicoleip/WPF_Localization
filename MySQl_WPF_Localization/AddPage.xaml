@@ -1,0 +1,41 @@
+﻿<Page x:Class="MySQL_WPF_Localization.AddPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d"
+	Title="Add"  Width="722.985" Height="458.478">
+
+    <Grid Margin="0,10,0,0">
+        <Button Content="{DynamicResource SaveStr}" HorizontalAlignment="Left" Height="30" Margin="263,307,0,0" VerticalAlignment="Top" Width="170" Click="btn_save_Click" Name="btn_save" />
+        <TextBox HorizontalAlignment="Left" Height="22" Margin="325,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Name="txt_email"/>
+        <TextBox HorizontalAlignment="Left" Height="22" Margin="325,208,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Name="txt_phone" />
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="325,162,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Name="txt_city"/>
+        <TextBox HorizontalAlignment="Left" Height="22" Margin="325,117,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Name="txt_address"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="325,73,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.629,-3.002"  Name="txt_name"/>
+        <Label HorizontalAlignment="Left" Margin="227,73,0,0" VerticalAlignment="Top" Content="{DynamicResource NameStr}" HorizontalContentAlignment="Center" Width="78"/>
+        <Label Content="{DynamicResource AddressStr}" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="227,117,0,0" VerticalAlignment="Top" Width="78"/>
+        <Label HorizontalAlignment="Left" Margin="227,208,0,0" VerticalAlignment="Top" Content="{DynamicResource PhoneStr}" HorizontalContentAlignment="Center" RenderTransformOrigin="0.42,2.346" Width="78"/>
+        <Label HorizontalAlignment="Left" Margin="227,162,0,0" VerticalAlignment="Top" Content="{DynamicResource CityStr}" HorizontalContentAlignment="Center" Width="66"/>
+        <Label HorizontalAlignment="Left" Margin="227,259,0,0" VerticalAlignment="Top" Content="{DynamicResource EmailStr}" HorizontalContentAlignment="Center" RenderTransformOrigin="0.395,0.423" Width="78"/>
+        <Label Content="{DynamicResource AddNewStr}" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="175,26,0,0" VerticalAlignment="Top" FontSize="24" Width="365"/>
+        <Button Content="{DynamicResource BackStr}"  HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="30" Margin="263,351,0,0" VerticalAlignment="Top" Width="170" x:Name="btn_back" Click="btn_back_Click" />
+        <Image HorizontalAlignment="Left" Height="100" Margin="563,320,0,0" VerticalAlignment="Top" Width="100"/>
+        <Image HorizontalAlignment="Left" Height="200" Margin="471,152,0,0" VerticalAlignment="Top" Width="192" Source="Images/employees.png"/>
+        <Image HorizontalAlignment="Left" Height="60" Margin="637,120,0,0" VerticalAlignment="Top" Width="67" RenderTransformOrigin="0.08,-0.06" Source="Images/plus.png">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="21.742"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image HorizontalAlignment="Left" Height="100" Margin="552,188,0,0" VerticalAlignment="Top" Width="100"/>
+        <Grid.Background>
+            <ImageBrush ImageSource="Images/wallpaper.jpg"/>
+        </Grid.Background>
+
+    </Grid>
+</Page>

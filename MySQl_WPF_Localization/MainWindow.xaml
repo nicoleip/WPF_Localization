@@ -1,0 +1,86 @@
+﻿<Window x:Class="MySQL_WPF_Localization.MainWindow"
+xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        ResizeMode="NoResize"
+      
+    Title="WPF Localization" Height="454.478" Width="722.985">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="0*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="Images/wallpaper.jpg"/>
+        </Grid.Background>
+        <TextBlock Height="32" HorizontalAlignment="Left" Margin="157,47,0,0" Name="textBlockHeading"
+Text="{DynamicResource EmployeesStr}" VerticalAlignment="Top" Width="310"  FontSize="20" FontStretch="Normal" Grid.Column="1"/>
+        <Grid HorizontalAlignment="Left" Width="625" Grid.Column="1" Margin="5,47,0,48">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0*"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition Width="366*"/>
+                <ColumnDefinition Width="76*"/>
+                <ColumnDefinition Width="173*"/>
+                <ColumnDefinition Width="0*"/>
+            </Grid.ColumnDefinitions>
+            <ListView x:Name="LggChoiceLV"
+                          Grid.Row="1"
+                          Margin="10,103,245,99"
+                          SelectionChanged="LggChoiceLV_SelectionChanged" Grid.Column="1" />
+
+
+
+            <DataGrid AutoGenerateColumns="False" HorizontalAlignment="Left" Margin="141,50,-63,51"
+Name="dataGridCustomers" Width="537" ItemsSource="{Binding Path=LoadDataBinding}"
+CanUserResizeRows="False" Grid.ColumnSpan="4" Grid.Column="1" Grid.RowSpan="2">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Path=id}" Header="Employee ID" Width="100"
+IsReadOnly="True" />
+                    <DataGridTextColumn Binding="{Binding Path=name}" Header="Name" Width="100"
+IsReadOnly="True" />
+                    <DataGridTextColumn Binding="{Binding Path=address}" Header="Address" Width="150"
+IsReadOnly="True" />
+                    <DataGridTextColumn Binding="{Binding Path=city}" Header="City" Width="100" IsReadOnly="True" />
+                    <DataGridTextColumn Binding="{Binding Path=phone}" Header="Phone" Width="120" 
+IsReadOnly="True" />
+                </DataGrid.Columns>
+            </DataGrid>
+            <Button Height="25" HorizontalAlignment="Left" Margin="102,285,-63,0"
+Name="btnloaddata" VerticalAlignment="Top" Width="134" Click="btnloaddata_Click" Grid.Column="3" Grid.RowSpan="2" Grid.ColumnSpan="2">
+                <TextBlock Name="TextBlock3" Text="{DynamicResource LoadStr }" />
+            </Button>
+            <Button HorizontalAlignment="Left" VerticalAlignment="Top" Width="125" Margin="27,285,0,0" Height="25" Click="Button_Click" Grid.Column="2" Grid.RowSpan="2" Grid.ColumnSpan="2">
+                <TextBlock Name="TextBlock1" Text="{DynamicResource AddStr}" />
+            </Button>
+            <Button  Margin="218,285,10,0" VerticalAlignment="Top" Click="Update_Click" Height="25" Grid.Column="1" Grid.RowSpan="2">
+                <TextBlock Name="TextBlock2" Text="{DynamicResource UpdateStr}" />
+            </Button>
+            <Label Content="Current language is:" Height="41" VerticalAlignment="Top" Margin="6,330,216,-41" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+            <Label Name="currLgg" Height="41" VerticalAlignment="Top" Margin="107,330,200,-41" Grid.RowSpan="2" Grid.Column="1" RenderTransformOrigin="-0.281,0.677"/>
+            <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="10,82,0,0" Grid.RowSpan="2" TextWrapping="Wrap" Text="Choose Language:" VerticalAlignment="Top" Width="111"/>
+
+
+
+
+            <Image HorizontalAlignment="Left" Height="47" Margin="61,-42,0,0" VerticalAlignment="Top" Width="48" Source="Images/en.png
+               " Grid.Column="2" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+            <Image HorizontalAlignment="Left" Height="47" Margin="38,-42,0,0" VerticalAlignment="Top" Width="48" Source="Images/de.png" Grid.Column="3" Grid.RowSpan="2"/>
+            <Image HorizontalAlignment="Left" Height="47" Margin="86,-42,0,0" VerticalAlignment="Top" Width="48" Source="Images/fr.png" Grid.Column="3" Grid.RowSpan="2"/>
+            <Image Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="47" Margin="134,-42,-9,0" VerticalAlignment="Top" Width="48" Source="Images/it.png" Grid.Column="3" Grid.RowSpan="2" RenderTransformOrigin="0.125,-2"/>
+            <Image HorizontalAlignment="Left" Height="47" Margin="9,-42,-57,0" VerticalAlignment="Top" Width="48" Source="Images/es.png" Grid.Column="4" Grid.RowSpan="2"/>
+
+
+        </Grid>
+        <DockPanel Grid.ColumnSpan="2" Margin="0,-28,0,0">
+            <Frame x:Name="NavigationFrame" Width="706" />
+        </DockPanel>
+
+    </Grid>
+</Window>

@@ -1,0 +1,15 @@
+﻿<Application x:Class="MySQL_WPF_Localization.App"
+         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Startup="Application_Startup"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!--  This is the fallBack language resource dictionnary. it should always be in First position.  -->
+                <!--  set EZLocalise.FallBackLanguage to the language used here.  -->
+                <ResourceDictionary x:Name="MyLanguages" Source="/Languages/InterfaceStrings_en.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
